@@ -1,0 +1,7 @@
+.product.data.items > .item.content {
+    margin-top: 20px;
+    box-sizing: border-box;
+    float: right;
+    margin-left: -100%;
+    width: 75% !important;
+}

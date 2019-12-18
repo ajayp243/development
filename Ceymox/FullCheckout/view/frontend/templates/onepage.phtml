@@ -1,0 +1,42 @@
+<?php
+/**
+* @author Ceymox Team
+* @copyright Copyright (c)2019 Ceymox (https://ceymox.com)
+* @package Ceymox_FullCheckout
+ */
+?>
+<?php
+/**
+ * @var $block Ceymox\FullCheckout\Block\Onepage
+ */
+?>
+<div><?php echo $block->getHtmlSnippet();  ?></div>
+<div class="columns">
+    <div class="column main">
+		<div class="product data items"
+		     data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 100}, "active": 1, "disabled": [3], "disabledState": "disabled"}}'>
+		    <div class="item title" data-role="collapsible">
+		        <a class="switch" data-toggle="trigger" href="#tab-svea" id="svea">
+		        	<img src="<?php echo $block->getViewFileUrl('Ceymox_FullCheckout::images/Svea_logo.jpg'); ?>" /></a>
+		    </div>
+		    <div id="tab-svea" class="item content" data-role="content">Loading...</div>
+
+		    <div class="item title" data-role="collapsible">
+		        <a class="switch" data-toggle="trigger" href="#tab-klarana" id="klarana"> 
+		        	<img src="<?php echo $block->getViewFileUrl('Ceymox_FullCheckout::images/Klarna-logo.jpg'); ?>" /></a>
+		    </div>
+		    <div id="tab-klarana" class="item content" data-role="content">Loading...</div>
+
+		    <div class="item title" data-role="collapsible">
+		        <a class="switch" data-toggle="trigger" href="#tab-other" id="other">Other</a>
+		    </div>
+		    <div id="tab-other" class="item content" data-role="content">Loading...</div>
+		</div>
+
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {"Ceymox_FullCheckout/js/choosepayment": {"customurl":"<?php echo $this->getUrl().'fullcheckout/onepage/result'?>"}}
+    }
+</script>

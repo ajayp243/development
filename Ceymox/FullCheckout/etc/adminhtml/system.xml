@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Jancy
+ *
+ * @package Hifx_CustomCheckout
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ceymox_extensions" translate="label" sortOrder="110">
+            <label>Ceymox Extensions</label>
+        </tab>
+        <section id="customcheckout" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Custom Checkout</label>
+            <tab>ceymox_extensions</tab>
+            <resource>Ceymox_FullCheckout::customcheckout_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>General</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable Custom Checkout Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>                    
+                </field>                
+            </group>
+        </section>
+    </system>
+</config>
